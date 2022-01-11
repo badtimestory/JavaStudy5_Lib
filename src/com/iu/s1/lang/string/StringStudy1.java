@@ -1,8 +1,49 @@
+/*
+ * 
+ * String 클래스에 있는 메서드 사용해보기
+ * @since 22.01.10
+ * 
+ * 
+ * */
 package com.iu.s1.lang.string;
 
 import java.util.Scanner;
 
 public class StringStudy1 {
+	
+	public void splitTest() {
+		String name = "iu suji choa 펭수 춘식이";
+		String[] names = name.split(" ");
+		for (int i = 0; i < names.length; i++) {
+			System.out.println("names[" + i + "]: " + names[i].trim());			
+		}
+	}
+	
+	public void valueTest() {
+		int num = 1000;
+		String result = String.valueOf(num);
+		System.out.println("valueOf: " + result);
+	}
+	
+	public void caseTest() {
+		String title = "West Side Story";
+		String result = title.toUpperCase();
+		String result2 = title.toLowerCase();
+		
+		System.out.println("title: " + title);
+		System.out.println("toUpperCase(): " + result);
+		System.out.println("toLowerCase(): " + result2);
+	}
+	
+	public void replaceTest() {
+		String title = "West Side Story";
+		// 참조변수명.멤버메서드명()
+		String result = title.replace("West", "North");
+		
+		System.out.println("title: " + title);
+		System.out.println("result: " + result);
+	}
+	
 	
 	public void subStringEx1() {
 		// 키보드로부터 업로드할 파일명을 입력
