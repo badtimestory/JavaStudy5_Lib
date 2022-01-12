@@ -1,17 +1,27 @@
 package com.iu.s3.ex1;
 
+import java.util.ArrayList;
+
 public class MemberMain {
 	public static void main(String[] args) {
 		// test, 프로그램 실행
 		MemberData md = new MemberData();
-		MemberDTO[] members = md.init();
+		ArrayList<MemberDTO> members = md.init();
 		
-		for (int i = 0; i < members.length; i++) {
-			System.out.println(members[i].getId());
-			System.out.println(members[i].getPw());
-			System.out.println(members[i].getName());
-			System.out.println(members[i].getEmail());
-			System.out.println(members[i].getAge());
+//		md.addMember(members);
+		MemberDTO memberDTO = md.removeMember(members);
+		if (memberDTO != null) {
+			System.out.println("삭제 성공");
+		} else {
+			System.out.println("삭제 실패");
+		}
+		
+		for (int i = 0; i < members.size(); i++) {
+			System.out.println(members.get(i).getId());
+			System.out.println(members.get(i).getPw());
+			System.out.println(members.get(i).getName());
+			System.out.println(members.get(i).getEmail());
+			System.out.println(members.get(i).getAge());
 			System.out.println("===========");
 		}
 	}
