@@ -1,6 +1,7 @@
 package com.iu.s3.ex1;
 
 import java.util.ArrayList;
+import java.util.StringTokenizer;
 
 public class MemberData {
 	
@@ -20,7 +21,7 @@ public class MemberData {
 		// data에 있는 문자열을 StringTokenizer로 파싱해서
 		// MemberDTO를 생성해서 멤버변수값으로 대입
 		// MemberDTO들을 ArrayList에 담아서 리턴
-	}
-		
+		System.out.println("MemberEx1 Branch");
 		return null;
 	}
+}
