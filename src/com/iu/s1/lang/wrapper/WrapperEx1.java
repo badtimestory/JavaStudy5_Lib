@@ -3,6 +3,11 @@ package com.iu.s1.lang.wrapper;
 import java.util.Scanner;
 
 public class WrapperEx1 {
+	private	Scanner sc;
+	
+	public WrapperEx1() {
+		this.sc = new Scanner(System.in); 
+	}
 	
 	public void ex2() {
 		// 키보드로부터 주민등록번호 압력
@@ -10,6 +15,9 @@ public class WrapperEx1 {
 		// 2  3  4 5  6  7 - 8  9 2  3  4  5
 		// 18 21 4 10 12 28  8 18 6 12 20 30
 		// 결과를 모두 더함 ex) 187
+		System.out.println("주민등록번호를 입력해주세요(앞자리 숫자6개-뒷자리 숫자7개): ");
+		Scanner sc = new Scanner(System.in);
+		String registNumber = sc.next();
 		
 		// 2. 모두 더한 결과값을 11로 나누어서 나머지를 구함
 		// 187/11 → 17 ... 0
@@ -25,7 +33,6 @@ public class WrapperEx1 {
 	public void ex1() {
 		// 키보드로부터 주민등록번호 입력
 		// 011224-1234567
-		Scanner sc = new Scanner(System.in);
 		System.out.print("주민등록번호를 입력해주세요(앞자리 숫자6개-뒷자리 숫자7개): ");
 		String registNumber = sc.next();
 		System.out.println("주민등록번호: " + registNumber);
